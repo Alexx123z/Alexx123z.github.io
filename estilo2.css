@@ -1,0 +1,217 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1faff;
+  
+    /* ✅ Imagen de fondo */
+    background-image: url('t654-1024x683.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; 
+  }
+  
+  
+  .header {
+    text-align: center;
+    background-color: #4c85a8;
+    padding: 20px;
+  }
+  
+  .logo-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .logo img {
+    width: 150px;
+    height: auto;
+    animation: rotar-logo 10s linear infinite;
+}
+
+@keyframes rotar-logo {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+  
+  .slogan {
+    font-weight: bold;
+    color: #004a87;
+  }
+  
+  .intro {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .tap-icon {
+    width: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .servicios {
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .servicios h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 250px;
+    height: 300px; 
+    padding: 15px;
+    text-align: left;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+  
+    opacity: 0;
+    transform: translateY(30px);
+    animation: aparecer 0.8s ease forwards;
+  }
+  
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  
+  .card h3 {
+    font-size: 16px;
+    color: #007bff;
+  }
+  
+  .card p {
+    font-size: 14px;
+  }
+  /* LOGO A LA IZQUIERDA */
+.logo-bar {
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+  
+  .logo-bar .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 120px;
+    height: auto;
+    animation: rotar-logo 10s linear infinite;
+  }
+  
+  /* PIE DE PÁGINA CON REDES SOCIALES */
+  .footer {
+    background-color: #004a87;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  
+  .social-icons {
+    margin-top: 10px;
+  }
+  
+  .social-icons a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .social-icons a:hover {
+    text-decoration: underline;
+  }
+  
+  .logo-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+    gap: 20px;
+  }
+  
+  .logo img {
+    width: 120px;
+    height: auto;
+    border-radius: 15px; /* ✅ Bordes redondeados para la imagen */
+    animation: rotar-logo 10s linear infinite;
+  }
+  
+  .logo-img {
+    border-radius: 15px; /* Redondeo si se usa esta clase */
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 250px;
+    padding: 15px;
+    text-align: left;
+  
+    opacity: 0;
+    transform: translateY(30px);
+    animation: aparecer 0.8s ease forwards;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  }
+  
+  @keyframes aparecer {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Pie de página */
+  .footer {
+    background-color: #004a87;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  
+  .social-icons {
+    margin-top: 10px;
+  }
+  
+  .social-icons a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .social-icons a:hover {
+    text-decoration: underline;
+  }
+  

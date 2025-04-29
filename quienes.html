@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EMAPA - Quiénes Somos</title>
     <link rel="stylesheet" href="estilox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header class="header">
@@ -14,33 +15,105 @@
         </div>
         <nav class="nav">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="quienes.html">Quiénes Somos</a></li>
-                <li><a href="#services">Servicios</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="quienes.html"><i class="fas fa-users"></i> Quiénes Somos</a></li>
+                <li><a href="servicios.html"><i class="fas fa-tools"></i> Servicios</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="about" class="about">
-            <h2>Quiénes Somos</h2>
-            <p>EMAPA es una empresa dedicada a proporcionar agua potable de alta calidad a la comunidad, comprometida con el cuidado del medio ambiente y la sostenibilidad.</p>
+            <div class="about-content">
+                <h2>Quiénes Somos</h2>
+                <p>EMAPA es una empresa dedicada a proporcionar agua potable de alta calidad a la comunidad, comprometida con el cuidado del medio ambiente y la sostenibilidad.</p>
+                <div class="water-drop">
+                    <i class="fas fa-tint"></i>
+                </div>
+            </div>
         </section>
         
         <section id="vision" class="vision">
             <h2>Visión</h2>
-            <p>Ser reconocida en el año 2022, como una empresa eficiente, rentable e innovadora en la dotación de servicios de agua potable y alcantarillado, con responsabilidad social y ambiental en el desarrollo de obras y proyectos de agua potable y alcantarillado.</p>
+            <div class="vision-content">
+                <p>Ser reconocida en el año 2022, como una empresa eficiente, rentable e innovadora en la dotación de servicios de agua potable y alcantarillado, con responsabilidad social y ambiental en el desarrollo de obras y proyectos de agua potable y alcantarillado.</p>
+                <div class="vision-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+            </div>
         </section>
 
         <section id="mision" class="mision">
             <h2>Misión</h2>
-            <p class="p1">Desarrollar, mantener y operar la infraestructura instalada para la dotación de servicios básicos de agua potable y alcantarillado de manera eficiente para contribuir a la salud y bienestar de la ciudadanía ambateña, garantizando el mantenimiento y conservación de las fuentes de agua, apoyando en el cuidado ambiental de la zona de influencia, implementando tecnología adecuada y altos estándares de calidad.</p>
+            <div class="mision-content">
+                <p class="p1">Desarrollar, mantener y operar la infraestructura instalada para la dotación de servicios básicos de agua potable y alcantarillado de manera eficiente para contribuir a la salud y bienestar de la ciudadanía ambateña, garantizando el mantenimiento y conservación de las fuentes de agua, apoyando en el cuidado ambiental de la zona de influencia, implementando tecnología adecuada y altos estándares de calidad.</p>
+                <div class="mision-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="team">
+            <h2>Nuestro Equipo</h2>
+            <div class="team-members">
+                <div class="member">
+                    <div class="member-img">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Director General</h3>
+                    <p>Lidera nuestra visión estratégica</p>
+                </div>
+                <div class="member">
+                    <div class="member-img">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <h3>Ingenieros</h3>
+                    <p>Expertos en infraestructura hídrica</p>
+                </div>
+                <div class="member">
+                    <div class="member-img">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Equipo Operativo</h3>
+                    <p>Garantizando servicio continuo</p>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer class="footer">
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
         <p>&copy; 2025 EMAPA. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+
+        const waterDrop = document.querySelector('.water-drop');
+        if (waterDrop) {
+            setInterval(() => {
+                waterDrop.style.transform = 'translateY(-10px)';
+                setTimeout(() => {
+                    waterDrop.style.transform = 'translateY(0)';
+                }, 500);
+            }, 2000);
+        }
+
+        const sections = document.querySelectorAll('section');
+        window.addEventListener('scroll', () => {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (sectionTop < windowHeight * 0.75) {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
